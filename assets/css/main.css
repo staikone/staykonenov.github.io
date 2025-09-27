@@ -1386,6 +1386,7 @@ img {
   /*border-radius: 50%;*/
   border-radius: 0.5rem;
   text-decoration: none;
+margin-left: 16px;
 }
 
 .linkedin-button i {
