@@ -170,28 +170,20 @@ window.addEventListener("scroll", scrollUp);
 /*==================== DARK/LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
-const sunIcon = "uil-sun";
-const moonIcon = "uil-moon";
 
 // Вземаме избраната тема от localStorage
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// Функции за текущата тема
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () => themeButton.classList.contains(moonIcon) ? "moon" : "sun";
-
 // Ако има запаметена тема, я прилагаме
-if (selectedTheme) {
-    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
-
-    if (selectedIcon === "moon") {
-        themeButton.classList.add(moonIcon);
-        themeButton.classList.remove(sunIcon);
-    } else {
-        themeButton.classList.add(sunIcon);
-        themeButton.classList.remove(moonIcon);
-    }
+if (selectedTheme === "dark") {
+    document.body.classList.add(darkTheme);
+    themeButton.classList.remove("uil-moon");
+    themeButton.classList.add("uil-sun");
+} else {
+    document.body.classList.remove(darkTheme);
+    themeButton.classList.remove("uil-sun");
+    themeButton.classList.add("uil-moon");
 }
 
 // Клик върху бутона
@@ -199,16 +191,14 @@ themeButton.addEventListener("click", () => {
     document.body.classList.toggle(darkTheme);
 
     // Смяна на иконата
-    if (themeButton.classList.contains(moonIcon)) {
-        themeButton.classList.remove(moonIcon);
-        themeButton.classList.add(sunIcon);
+    if (themeButton.classList.contains("uil-moon")) {
+        themeButton.classList.remove("uil-moon");
+        themeButton.classList.add("uil-sun");
     } else {
-        themeButton.classList.remove(sunIcon);
-        themeButton.classList.add(moonIcon);
+        themeButton.classList.remove("uil-sun");
+        themeButton.classList.add("uil-moon");
     }
 
     // Запазване в localStorage
-    localStorage.setItem("selected-theme", getCurrentTheme());
-    localStorage.setItem("selected-icon", getCurrentIcon());
+    localStorage.setItem("selected-theme", document.body.classList.contains(darkTheme) ? "dark" : "light");
 });
-
