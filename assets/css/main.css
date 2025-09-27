@@ -325,7 +325,7 @@ img {
 }
 
 .home__description {
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-3);
 }
 
 .home__scroll {
