@@ -167,36 +167,47 @@ function scrollUp() {
 }
 window.addEventListener("scroll", scrollUp);
 
-/*==================== DARK LIGHT THEME ====================*/
+/*==================== DARK/LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
-const iconTheme = "uil-moon"; // промяна от uil-sun на uil-moon
+const sunIcon = "uil-sun";
+const moonIcon = "uil-moon";
 
-// Previously selected topic (if user selected)
+// Вземаме избраната тема от localStorage
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () =>
-    document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
-    themeButton.classList.contains(iconTheme) ? "uil-sun" : "uil-moon";
+// Функции за текущата тема
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () => themeButton.classList.contains(moonIcon) ? "moon" : "sun";
 
-// We validate if the user previously chose a topic
+// Ако има запаметена тема, я прилагаме
 if (selectedTheme) {
-    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-        darkTheme
-    );
-    themeButton.classList[selectedIcon === "uil-sun" ? "add" : "remove"](
-        iconTheme
-    );
+    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
+
+    if (selectedIcon === "moon") {
+        themeButton.classList.add(moonIcon);
+        themeButton.classList.remove(sunIcon);
+    } else {
+        themeButton.classList.add(sunIcon);
+        themeButton.classList.remove(moonIcon);
+    }
 }
 
-// Activate / deactivate the theme manually with the button
+// Клик върху бутона
 themeButton.addEventListener("click", () => {
     document.body.classList.toggle(darkTheme);
-    themeButton.classList.toggle(iconTheme);
+
+    // Смяна на иконата
+    if (themeButton.classList.contains(moonIcon)) {
+        themeButton.classList.remove(moonIcon);
+        themeButton.classList.add(sunIcon);
+    } else {
+        themeButton.classList.remove(sunIcon);
+        themeButton.classList.add(moonIcon);
+    }
+
+    // Запазване в localStorage
     localStorage.setItem("selected-theme", getCurrentTheme());
     localStorage.setItem("selected-icon", getCurrentIcon());
 });
-
