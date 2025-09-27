@@ -866,7 +866,7 @@ img {
     color: var(--first-color);
 }
 
-.swiper-container .swiper-pagination-testimonial {
+.swiper-pagination {
     bottom: 0;
 }
 
