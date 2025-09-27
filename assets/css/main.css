@@ -1084,14 +1084,14 @@ img {
     
     .home__social {
         transform: translateX(0rem);
-        margin-top: 32px;
+        margin-top: var(--mb-3);
     }
 }
 
 @media screen and (max-width: 567px) {
     .home__social {
         transform: translateX(0rem);
-        margin-top: 32px;
+        margin-top: var(--mb-3);
     }
 }
 
@@ -1128,7 +1128,7 @@ img {
     
     .home__social {
         transform: translateX(0rem);
-        margin-top: 32px;
+        margin-top: var(--mb-3);
     }
 }
 
@@ -1305,7 +1305,7 @@ img {
     }
     .home__social {
         transform: translateX(0rem);
-        margin-top: 32px;
+        margin-top: var(--mb-3);
     }
 }
 
@@ -1356,7 +1356,7 @@ img {
     /*.home__social {
         transform: translateX(-6rem)*/
         transform: translateX(0rem);
-        margin-top: 32px;
+        margin-top: var(--mb-3);
          /*padding-top: 1.5rem;
         padding-bottom: 2.5rem;
         flex-direction: row;
