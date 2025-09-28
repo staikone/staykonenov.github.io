@@ -136,6 +136,7 @@ a {
 img {
     max-width: 100%;
     height: auto;
+    padding-bottom: 0.5rem;
 }
 
 /*==================== REUSABLE CSS CLASSES ====================*/
