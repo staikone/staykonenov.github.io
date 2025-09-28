@@ -1,106 +1,4 @@
-<!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle">My introduction</span>
-            <div class="about__container container grid">
-                <img src="images/Stayko Nenov.jpg" alt="" class="about__img">
-                <div class="about__data">
-                    <p class="about__description">
-                        I enjoy designing clean and user-friendly interfaces, with attention to both visuals and usability.  
-Most of my experience comes from working on web and mobile projects in B2B e-commerce, where I aim to keep things as simple and intuitive as possible.  
-I’m still growing as a designer and enjoy learning from every project I take on.  
-Currently open to new opportunities and collaborations.
-                    </p>
-                    <div class="about__info">
-                        <div>
-                            <span class="about__info-title">03</span>
-                            <span class="about__info-name">Years <br> experience</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">99+</span>
-                            <span class="about__info-name">Completed <br> projects</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">01</span>
-                            <span class="about__info-name">Companies <br> worked</span>
-                        </div>
-                    </div>
-                    <div class="about__buttons">
-                        <a download="" href="https://alexa-responsive-portfolio-website.vercel.app/assets/pdf/Alexa-Cv.pdf" class="button button--flex">
-                            Download CV<i class="uil uil-download-alt button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--==================== TOOLS ====================-->
-<section class="services section" id="services">
-  <h2 class="section__title">Design Tools I Use</h2>
-  <span class="section__subtitle">
-    These are my go-to design tools. I enjoy testing new ones, but the real magic comes from practice and creativity.
-  </span>
-
-  <div class="services__container container grid">
-
-    <!--==================== SERVICES 1 ====================-->
-    <div class="services__content">
-      <div>
-        <img src="images/Figma.svg" alt="Figma Icon" width="80" height="80">
-        <!-- <i class="uil uil-web-grid services__icon"></i> -->
-        <h3 class="services__title">Figma</h3>
-      </div>
-      <a class="button button--flex button--small button--link services__button"
-         href="https://figma.com/" target="_blank" rel="noopener">
-        Interface Design Tool
-        <i class="uil uil-arrow-right button__icon"></i>
-      </a>
-    </div>
-
-    <!--==================== SERVICES 2 ====================-->
-    <div class="services__content">
-      <div>
-        <img src="images/Ai.svg" alt="Adobe Illustrator Icon" width="80" height="80">
-        <!-- <i class="uil uil-web-grid services__icon"></i> -->
-        <h3 class="services__title">Adobe<br>Illustrator</h3>
-      </div>
-      <a class="button button--flex button--small button--link services__button"
-         href="https://www.adobe.com" target="_blank" rel="noopener">
-        Vector Design Tool
-        <i class="uil uil-arrow-right button__icon"></i>
-      </a>
-    </div>
-
-    <!--==================== SERVICES 3 ====================-->
-    <div class="services__content">
-      <div>
-        <img src="images/PS.svg" alt="Adobe Photoshop Icon" width="80" height="80">
-        <!-- <i class="uil uil-web-grid services__icon"></i> -->
-        <h3 class="services__title">Adobe<br>Photoshop</h3>
-      </div>
-      <a class="button button--flex button--small button--link services__button"
-         href="https://www.adobe.com" target="_blank" rel="noopener">
-        Raster Design Tool
-        <i class="uil uil-arrow-right button__icon"></i>
-      </a>
-    </div>
-
-    <!--==================== SERVICES 4 ====================-->
-    <div class="services__content">
-      <div>
-        <img src="images/Jira_Logo.svg" alt="Jira Icon" width="80" height="80">
-        <!-- <i class="uil uil-web-grid services__icon"></i> -->
-        <h3 class="services__title">Jira</h3>
-      </div>
-      <a class="button button--flex button--small button--link services__button"
-         href="https://www.atlassian.com/software/jira?referer=jira.com/" target="_blank" rel="noopener">
-        Productivity Tool
-        <i class="uil uil-arrow-right button__icon"></i>
-      </a>
-    </div>
-
-  </div>
-</section>/*==================== GOOGLE FONTS ====================*/
+/*==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*==================== VARIABLES CSS ====================*/
@@ -1189,6 +1087,7 @@ img {
         transform: translateX(0rem);
         margin-top: 32px;
     }
+
     .services__container {
     display: flex;
     flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
@@ -1216,7 +1115,6 @@ img {
     margin-top: 1rem;        /* оставя малко пространство отгоре */
     position: relative;       /* вече не трябва да е absolute */
 }
-
     
 }
 
@@ -1226,34 +1124,37 @@ img {
         margin-top: 32px;
     }
 
-        .services__container {
-    display: flex;
-    flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
-    justify-content: center;  /* центрира кутийките в контейнера */
-    gap: 1.5rem;              /* разстояние между кутийките */
-}
-
-.services__content {
-    flex: 1 1 200px;          /* расте и се свива, минимална ширина 200px */
+    .services__content {
+    position: relative;          /* за да може линкът да се позиционира вътре */
+    width: 220px;                /* примерно, можеш да нагласиш */
     min-height: 250px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* бутонът винаги в долния край */
-    text-align: center;
-    box-sizing: border-box;   /* padding не чупи ширината */
+    align-items: center;         /* центрира само вътрешния блок services__main */
+    justify-content: center;     
+    text-align: center;          /* текстът става центриран */
+}
+
+.services__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* държи текста точно под логото */
+}
+
+.services__title {
+    margin: 0;
+    line-height: 1.2;
 }
 
 .services__button {
-    display: inline-flex;
+    position: absolute;          /* откъсва линка от flex центрирането */
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
     align-items: center;
-    justify-content: center;
     text-decoration: none;
-    margin-top: 1rem;        /* оставя малко пространство отгоре */
-    position: relative;       /* вече не трябва да е absolute */
 }
-
 }
 
 
@@ -1292,34 +1193,37 @@ img {
         margin-top: 32px;
     }
     
-    .services__container {
-    display: flex;
-    flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
-    justify-content: center;  /* центрира кутийките в контейнера */
-    gap: 1.5rem;              /* разстояние между кутийките */
-}
-
-.services__content {
-    flex: 1 1 200px;          /* расте и се свива, минимална ширина 200px */
+    .services__content {
+    position: relative;          /* за да може линкът да се позиционира вътре */
+    width: 220px;                /* примерно, можеш да нагласиш */
     min-height: 250px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* бутонът винаги в долния край */
-    text-align: center;
-    box-sizing: border-box;   /* padding не чупи ширината */
+    align-items: center;         /* центрира само вътрешния блок services__main */
+    justify-content: center;     
+    text-align: center;          /* текстът става центриран */
+}
+
+.services__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* държи текста точно под логото */
+}
+
+.services__title {
+    margin: 0;
+    line-height: 1.2;
 }
 
 .services__button {
-    display: inline-flex;
+    position: absolute;          /* откъсва линка от flex центрирането */
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
     align-items: center;
-    justify-content: center;
     text-decoration: none;
-    margin-top: 1rem;        /* оставя малко пространство отгоре */
-    position: relative;       /* вече не трябва да е absolute */
 }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -1437,34 +1341,36 @@ img {
         font-size: 2rem;
     }
 
-   .services__container {
-    display: flex;
-    flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
-    justify-content: center;  /* центрира кутийките в контейнера */
-    gap: 1.5rem;              /* разстояние между кутийките */
-}
-
-.services__content {
-    flex: 1 1 200px;          /* расте и се свива, минимална ширина 200px */
+   .services__content {
+    position: relative;          /* за да може линкът да се позиционира вътре */
+    width: 220px;                /* примерно, можеш да нагласиш */
     min-height: 250px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* бутонът винаги в долния край */
-    text-align: center;
-    box-sizing: border-box;   /* padding не чупи ширината */
+    align-items: center;         /* центрира само вътрешния блок services__main */
+    justify-content: center;     
+    text-align: center;          /* текстът става центриран */
+}
+
+.services__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* държи текста точно под логото */
+}
+
+.services__title {
+    margin: 0;
+    line-height: 1.2;
 }
 
 .services__button {
-    display: inline-flex;
+    position: absolute;          /* откъсва линка от flex центрирането */
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
     align-items: center;
-    justify-content: center;
     text-decoration: none;
-    margin-top: 1rem;        /* оставя малко пространство отгоре */
-    position: relative;       /* вече не трябва да е absolute */
-}
-
 }
 
 
