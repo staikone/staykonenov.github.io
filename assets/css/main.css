@@ -1239,7 +1239,7 @@ img {
     }
 
     .services__container {
-        grid-template-columns: repeat(3, 218px);
+        grid-template-columns: repeat(4, 218px);
         justify-content: center;
     }
 
@@ -1248,7 +1248,9 @@ img {
     }
 
     .services__content {
-        padding: 6rem 0 2rem 2.5rem;
+        padding: 6rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
     }
 
     .services__modal-content {
