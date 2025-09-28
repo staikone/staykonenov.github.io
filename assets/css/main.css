@@ -1087,6 +1087,38 @@ img {
         transform: translateX(0rem);
         margin-top: 32px;
     }
+
+    .services__content {
+    position: relative;          /* за да може линкът да се позиционира вътре */
+    width: 220px;                /* примерно, можеш да нагласиш */
+    min-height: 250px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* центрира само вътрешния блок services__main */
+    justify-content: center;     
+    text-align: center;          /* текстът става центриран */
+}
+
+.services__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* държи текста точно под логото */
+}
+
+.services__title {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.services__button {
+    position: absolute;          /* откъсва линка от flex центрирането */
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
     
 }
 
@@ -1095,6 +1127,38 @@ img {
         transform: translateX(0rem);
         margin-top: 32px;
     }
+
+    .services__content {
+    position: relative;          /* за да може линкът да се позиционира вътре */
+    width: 220px;                /* примерно, можеш да нагласиш */
+    min-height: 250px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* центрира само вътрешния блок services__main */
+    justify-content: center;     
+    text-align: center;          /* текстът става центриран */
+}
+
+.services__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* държи текста точно под логото */
+}
+
+.services__title {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.services__button {
+    position: absolute;          /* откъсва линка от flex центрирането */
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 }
 
 
@@ -1132,6 +1196,38 @@ img {
         transform: translateX(0rem);
         margin-top: 32px;
     }
+    
+    .services__content {
+    position: relative;          /* за да може линкът да се позиционира вътре */
+    width: 220px;                /* примерно, можеш да нагласиш */
+    min-height: 250px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* центрира само вътрешния блок services__main */
+    justify-content: center;     
+    text-align: center;          /* текстът става центриран */
+}
+
+.services__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* държи текста точно под логото */
+}
+
+.services__title {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.services__button {
+    position: absolute;          /* откъсва линка от flex центрирането */
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 }
 
 @media screen and (min-width: 768px) {
