@@ -1189,37 +1189,34 @@ img {
         transform: translateX(0rem);
         margin-top: 32px;
     }
-    .services__content {
-  position: relative;
-  width: 100%;               /* заема наличното пространство */
-  max-width: 220px;          /* но не повече от 220px */
-  min-height: 250px;
-  margin: 0 auto;            /* центрира кутиите */
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
+    .services__container {
+    display: flex;
+    flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
+    justify-content: center;  /* центрира кутийките в контейнера */
+    gap: 1.5rem;              /* разстояние между кутийките */
 }
 
-.services__main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.services__title {
-  margin: 0.5rem 0;
-  line-height: 1.2;
+.services__content {
+    flex: 1 1 200px;          /* расте и се свива, минимална ширина 200px */
+    min-height: 250px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* бутонът винаги в долния край */
+    text-align: center;
+    box-sizing: border-box;   /* padding не чупи ширината */
 }
 
 .services__button {
-  margin-top: auto;          /* бутона пада винаги долу */
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 1rem;        /* оставя малко пространство отгоре */
+    position: relative;       /* вече не трябва да е absolute */
 }
+
     
 }
 
@@ -1229,37 +1226,34 @@ img {
         margin-top: 32px;
     }
 
-    .services__content {
-    position: relative;          /* за да може линкът да се позиционира вътре */
-    width: 220px;                /* примерно, можеш да нагласиш */
+        .services__container {
+    display: flex;
+    flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
+    justify-content: center;  /* центрира кутийките в контейнера */
+    gap: 1.5rem;              /* разстояние между кутийките */
+}
+
+.services__content {
+    flex: 1 1 200px;          /* расте и се свива, минимална ширина 200px */
     min-height: 250px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;         /* центрира само вътрешния блок services__main */
-    justify-content: center;     
-    text-align: center;          /* текстът става центриран */
-}
-
-.services__main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;         /* държи текста точно под логото */
-}
-
-.services__title {
-    margin: 0;
-    line-height: 1.2;
+    align-items: center;
+    justify-content: space-between; /* бутонът винаги в долния край */
+    text-align: center;
+    box-sizing: border-box;   /* padding не чупи ширината */
 }
 
 .services__button {
-    position: absolute;          /* откъсва линка от flex центрирането */
-    bottom: 1rem;
-    left: 1rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
+    margin-top: 1rem;        /* оставя малко пространство отгоре */
+    position: relative;       /* вече не трябва да е absolute */
 }
+
 }
 
 
@@ -1298,37 +1292,34 @@ img {
         margin-top: 32px;
     }
     
-    .services__content {
-    position: relative;          /* за да може линкът да се позиционира вътре */
-    width: 220px;                /* примерно, можеш да нагласиш */
+    .services__container {
+    display: flex;
+    flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
+    justify-content: center;  /* центрира кутийките в контейнера */
+    gap: 1.5rem;              /* разстояние между кутийките */
+}
+
+.services__content {
+    flex: 1 1 200px;          /* расте и се свива, минимална ширина 200px */
     min-height: 250px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;         /* центрира само вътрешния блок services__main */
-    justify-content: center;     
-    text-align: center;          /* текстът става центриран */
-}
-
-.services__main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;         /* държи текста точно под логото */
-}
-
-.services__title {
-    margin: 0;
-    line-height: 1.2;
+    align-items: center;
+    justify-content: space-between; /* бутонът винаги в долния край */
+    text-align: center;
+    box-sizing: border-box;   /* padding не чупи ширината */
 }
 
 .services__button {
-    position: absolute;          /* откъсва линка от flex центрирането */
-    bottom: 1rem;
-    left: 1rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
+    margin-top: 1rem;        /* оставя малко пространство отгоре */
+    position: relative;       /* вече не трябва да е absolute */
 }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1446,36 +1437,34 @@ img {
         font-size: 2rem;
     }
 
-   .services__content {
-    position: relative;          /* за да може линкът да се позиционира вътре */
-    width: 220px;                /* примерно, можеш да нагласиш */
+   .services__container {
+    display: flex;
+    flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
+    justify-content: center;  /* центрира кутийките в контейнера */
+    gap: 1.5rem;              /* разстояние между кутийките */
+}
+
+.services__content {
+    flex: 1 1 200px;          /* расте и се свива, минимална ширина 200px */
     min-height: 250px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;         /* центрира само вътрешния блок services__main */
-    justify-content: center;     
-    text-align: center;          /* текстът става центриран */
-}
-
-.services__main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;         /* държи текста точно под логото */
-}
-
-.services__title {
-    margin: 0;
-    line-height: 1.2;
+    align-items: center;
+    justify-content: space-between; /* бутонът винаги в долния край */
+    text-align: center;
+    box-sizing: border-box;   /* padding не чупи ширината */
 }
 
 .services__button {
-    position: absolute;          /* откъсва линка от flex центрирането */
-    bottom: 1rem;
-    left: 1rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
+    margin-top: 1rem;        /* оставя малко пространство отгоре */
+    position: relative;       /* вече не трябва да е absolute */
+}
+
 }
 
 
