@@ -1239,7 +1239,7 @@ img {
     }
 
     .services__container {
-        grid-template-columns: repeat(4, 218px);
+        grid-template-columns: repeat(3, 218px);
         justify-content: center;
     }
 
