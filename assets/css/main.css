@@ -1247,23 +1247,27 @@ img {
         font-size: 2rem;
     }
 
-    .services__content {
-    position: relative;       /* за да може линкът да се позиционира абсолютно */
-    padding: 4rem 0 2rem 0;
+   .services__content {
+    position: relative;        /* контейнерът за абсолютен линк */
+    width: 300px;              /* примерна ширина */
+    min-height: 250px;         /* достатъчна височина, за да не застъпва линка */
+    padding: 2rem;
     display: flex;
-    justify-content: center;  /* центрира основното съдържание */
-    flex-direction: column;   /* вертикално подреждане */
-    align-items: center;      /* центрира логото и текста */
+    flex-direction: column;    /* подрежда логото/текста вертикално */
+    align-items: center;       /* центрира хоризонтално */
+    justify-content: center;   /* центрира вертикално */
+    text-align: center;        /* центрира текста в блока */
 }
 
 .services__button {
-    position: absolute;  /* поставя линка спрямо контейнера */
+    position: absolute;        /* фиксира линка в ъгъла */
     bottom: 1rem;
     left: 1rem;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
+
 
     .services__modal-content {
         width: 450px;
