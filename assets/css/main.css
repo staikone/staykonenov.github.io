@@ -1336,7 +1336,7 @@ img {
     }
 
    .services__container {
-    display: flex;
+    
     flex-wrap: wrap;          /* позволява кутийките да се пренареждат */
     justify-content: center;  /* центрира кутийките в контейнера */
     gap: 1.5rem;              /* разстояние между кутийките */
