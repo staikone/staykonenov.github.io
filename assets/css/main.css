@@ -415,7 +415,7 @@ img {
 }
 
 .about__description {
-    text-align: center;
+    text-align: initial;
     margin-bottom: var(--mb-2-5);
 }
 
@@ -1438,7 +1438,7 @@ img {
     }
 
     .services__container {
-        grid-template-columns: repeat(3, 238px);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .portfolio__content {
