@@ -720,6 +720,7 @@ img {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
+     margin-top: var(--mb-1-5);
 }
 
 .services__modal-close {
@@ -1368,7 +1369,7 @@ img {
 
 
     .services__modal-content {
-        width: 450px;
+        /* width: 450px; */
     }
 
     .portfolio__img {
