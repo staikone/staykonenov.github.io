@@ -705,7 +705,10 @@ img {
     position: relative;
     background-color: var(--container-color);
     padding: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem; 
+    max-width: 800px;                  /* ширина на модала */
+    max-height: 90vh;                  /* височина ограничена до 90% от екрана */
+    overflow-y: auto; 
 }
 
 .services__modal-services {
